@@ -1,4 +1,4 @@
-# Single Page Movie App
+# Quiz App
 
 This is a very simple, Quiz App. It has a set number of questions and answers stored in a file
 
