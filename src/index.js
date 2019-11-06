@@ -40,7 +40,6 @@ class QuizBee extends Component {
     })
   }
 
-
   componentDidMount () {
     this.getQuestions();
   }
