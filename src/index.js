@@ -8,7 +8,7 @@ import Result from './components/Result';
 class QuizBee extends Component {
   state = {
     questionBank: [],
-    totalQuestions: 6
+    totalQuestions: 5
   };
   
   getQuestions = () => {
