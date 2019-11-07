@@ -1,7 +1,7 @@
 const qBank = [
   {
     question:
-      "Virgin Trains, Virgin Atlantic and Virgin Racing, are all companies owned by which famous entrepreneur?   ",
+      "Virgin Trains, Virgin Atlantic and Virgin Racing, are all companies owned by which famous entrepreneur?",
     answers: ["Richard Branson", "Alan Sugar", "Donald Trump", "Bill Gates"],
     correct: "Richard Branson",
     questionId: "099099"
@@ -32,7 +32,7 @@ const qBank = [
     questionId: "333247"
   },
   {
-    question: "What is the most common surname Wales?",
+    question: "What is the most common surname in Wales?",
     answers: ["Jones", "Williams", "Davies", "Evans"],
     correct: "Jones",
     questionId: "496293"
@@ -352,7 +352,7 @@ const qBank = [
   },
   {
     question:
-      "Which country, not including Japan, has the most people of japanese decent?",
+      "Which country, not including Japan, has the most people of Japanese descent?",
     answers: ["Brazil", "China", "South Korea", "United States of America"],
     correct: "Brazil",
     questionId: "4795960"
