@@ -8,14 +8,15 @@ import Result from './components/Result';
 class QuizBee extends Component {
   state = {
     questionBank: [],
+    totalQuestions: 5
   };
   
   getQuestions = () => {
-    quizService().then(question => {
+    quizService(this.state.totalQuestions).then(question => {
       this.setState({
-        questionBank:  question,
+        questionBank: question,
         score: 0,
-        responses:  0
+        responses:  0,
       });
     });
   };
@@ -27,7 +28,7 @@ class QuizBee extends Component {
       });
     }
     this.setState({
-      responses: this.state.responses < 5 ? this.state.responses + 1 : 5,
+      responses: this.state.responses < this.state.totalQuestions ? this.state.responses + 1 : this.state.totalQuestions,
     })  
   }
 
@@ -39,7 +40,6 @@ class QuizBee extends Component {
     })
   }
 
-
   componentDidMount () {
     this.getQuestions();
   }
@@ -48,12 +48,12 @@ class QuizBee extends Component {
     return(
       <div className="container">
         <div className="title">QuizBee</div>
-        {this.state.questionBank.length > 0 && this.state.responses < 5 && this.state.questionBank.map(
+        {this.state.questionBank.length > 0 && this.state.responses < this.state.totalQuestions && this.state.questionBank.map(
           ({question, answers, correct, questionId}) => (
-          <QuestionBox question={question} options={answers} key={questionId} selected={answer => this.computeAnswer(answer, correct)}/>
+            <QuestionBox question={question} options={answers} key={questionId} selected={answer => this.computeAnswer(answer, correct)}/>
           )
         )}
-        {this.state.responses === 5 ? (<Result score={this.state.score} playAgain={this.playAgain}/>) : null}
+        {this.state.responses === this.state.totalQuestions ? (<Result score={this.state.score} playAgain={this.playAgain} numQuestions={this.state.totalQuestions}/>) : null}
       </div>
     );
   }
