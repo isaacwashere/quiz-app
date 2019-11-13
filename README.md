@@ -39,6 +39,9 @@ This is a very simple, Quiz App. It has a set number of questions and answers st
 ## Future Implementation(s)
 
 * A User account
-* Get the questions from an API
+* Get more questions from an API
+* Categorize questions
+* Allow a user to choose the topic of the questions they want
+* Allow a user to choose how many questions they want
 * Change the name to a cooler name 
 * Give a percentage score (or maybe a letter grade)
